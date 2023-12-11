@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 40px); /* Ajusta el tamaño de las columnas según sea necesario */
+  gap: 5px; /* Ajusta el espacio entre los cuadrados según sea necesario */
+  margin: 0 auto;
+  max-width: 400px; /* Ajusta el ancho máximo del tablero según sea necesario */
+}
+
+.square {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #b81010;
+}
+
+.square:hover {
+  background-color: rgb(63, 152, 55); /* Cambia el color al pasar el ratón sobre el cuadrado */
+}
+
+/* Puedes agregar más estilos según sea necesario */
