@@ -1,0 +1,21 @@
+.cuadrado-tablero {
+    border: 1px solid #5b5a5a;
+    cursor: crosshair;
+    transition: background-color 100ms ease-in-out;
+}
+
+.cuadrado-tablero:hover {
+    background-color: #3b9b2d;
+}
+
+.fallido {
+    background-color: #0cc1e9;
+}
+
+.impacto {
+    background-color: #b67f00;
+}
+
+.barco-hundido {
+    background-color: #d0025b;
+}

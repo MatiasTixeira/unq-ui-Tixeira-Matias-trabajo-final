@@ -1,0 +1,16 @@
+.tablero {
+    --board-rows: 10;
+    --board-columns: 10;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000000;
+    display: grid;
+    grid-template-columns: repeat(var(--board-columns), 1fr);
+    grid-template-rows: repeat(var(--board-rows), 1fr);
+  }
+  .bloquear-tablero {
+    pointer-events: none;
+  }

@@ -1,0 +1,21 @@
+.tablero {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tablero.row {
+    flex-direction: row;
+    width: 400px;
+    height: 20px;
+    left: 30px;
+    top: 0px;
+    }
+
+.tablero.column {
+    flex-direction: column;
+    width: 20px;
+    height: 400px;
+    left: 0px;
+    top: 30px;
+}
