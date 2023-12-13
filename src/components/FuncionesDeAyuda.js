@@ -23,10 +23,10 @@ export const obtenerBloquesOcupables = ( esHorizontal, indiceFila, indiceColumna
     .forEach((_, indiceArr) => {
       bloquesOcupables.push( obtenerDatosOcupablesSegunEje( esHorizontal, indiceFila, indiceColumna, indiceArr ) )
     })
-  return bloquesOcupables;
+  return bloquesOcupables
 }
 
-export const estáOcupadoPorOtroBarco = (barcosDesplegados, bloquesOcupados) => {
+export const estaOcupadoPorOtroBarco = (barcosDesplegados, bloquesOcupados) => {
   let estáOcupado = false
   let nombreBarco = ""
   if (barcosDesplegados && barcosDesplegados.length > 0) {
