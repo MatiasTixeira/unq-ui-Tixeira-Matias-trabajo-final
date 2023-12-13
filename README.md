@@ -12,4 +12,4 @@
 
 ## Correr el proyecto 
 
-1. Una vez terminado el paso 4 de la instalacion escribir en la consola el comando "npm start". Esto abrira su navegador con la pagina cargada y ya podra disfrutar del juego
+1. Una vez terminado el paso 4 de la instalacion escribir en la consola el comando "npm run dev". Esto abrira su navegador con la pagina cargada y ya podra disfrutar del juego
