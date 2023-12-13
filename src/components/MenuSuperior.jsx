@@ -1,4 +1,5 @@
 import './PaginaPrincipal.css'
+import { NavLink } from 'react-router-dom'
 
 const MenuSuperior = () => {
     return(
@@ -6,8 +7,8 @@ const MenuSuperior = () => {
             <nav>
             <ul>
                 <li><p> BATALLA NAVAL </p></li>
-                <li><NavLink to="/"><a className="Reglas" href="pagina submain2.html">REGLAS</a></NavLink></li>
-                <li><NavLink to="/game"><a className="JUGAR" href="contactos.html">JUGAR </a></NavLink></li>
+                <li><NavLink to="/"><a className="Reglas">REGLAS</a></NavLink></li>
+                <li><NavLink to="/game"><a className="JUGAR">JUGAR </a></NavLink></li>
             </ul>
             </nav>
         </div>

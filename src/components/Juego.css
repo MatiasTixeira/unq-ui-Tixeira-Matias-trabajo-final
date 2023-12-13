@@ -1,0 +1,39 @@
+/* battship component start */
+
+.battleship__stage {
+  width: 100%;
+  height: 100vh;
+}
+
+.battleship__content {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.battleship__content--board {
+  flex: 0 0 45%;
+  height: 100%;
+}
+
+.battleship__content--board--wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.battleship__content--board--container {
+  position: relative;
+}
+@media only screen and (max-width: 992px) {
+  .battleship__content {
+    flex-direction: column;
+    margin-left: -250px;
+  }
+  .battleship__content--board:last-child {
+    margin-top: 10%;
+  }
+}
+
+/* battship component end */

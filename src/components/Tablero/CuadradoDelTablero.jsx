@@ -18,13 +18,18 @@ const CuadradoDelTablero = ({ onClick, verificarOcupacion, propietarioTablero, d
     claseAtaqueTablero = propietarioTablero === posiblesJUgadores.computadora ? "" : nombreBarco
   }
 
+  const handleClick = () =>{
+      if (barcoHundido || haSidoAtacada || bloqueImpactoFallido) {
+        return 
+      } else {
+        onClick()
+      }
+  }
+
   return (
     <div
       id={divId}
-      onClick={() => {
-        if (barcoHundido || haSidoAtacada || bloqueImpactoFallido) { return }
-        onClick()
-      }}
+      onClick={ () => handleClick() }
       disabled={barcoHundido || haSidoAtacada || bloqueImpactoFallido}
       className={`cuadrado-tablero ${claseAtaqueTablero}`}
     ></div>

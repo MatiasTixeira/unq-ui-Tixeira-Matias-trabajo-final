@@ -1,10 +1,9 @@
 import React from "react"
 import CuadradoDelTablero from "./CuadradoDelTablero"
-import { barcos, posiblesJUgadores, tiroEsquivado } from "../Informacion.js"
-import 'Tablero.css'
+import { TableroDelJueguito, posiblesJUgadores, tiroEsquivado } from "../Informacion.js"
+import './Tablero.css'
 
-const Tablero = ({ onClickCeldaTablero, barcosDesplegados, propietarioTablero, haComenzadoElJuego
-}) => {
+const Tablero = ({ onClickCeldaTablero, barcosDesplegados, propietarioTablero, haComenzadoElJuego }) => {
 
     // Verifica si una celda está ocupada por un barco
     const verificarOcupacion = (indiceFila, indiceColumna) => {
@@ -40,22 +39,20 @@ const Tablero = ({ onClickCeldaTablero, barcosDesplegados, propietarioTablero, h
                     ? "bloquear-tablero"
                     : ""
                 }`} >
-            {barcos.map((fila, indiceColumna) => {
+            {TableroDelJueguito.map((fila, indiceColumna) => {
+                console.log(typeof onClickCeldaTablero)
                 return fila.map((_, indiceFila) => {
                     return (
                         <CuadradoDelTablero
                             divId={`celda_${indiceFila}_${indiceColumna}`}
-                            onClick={() =>
-                                onClickCeldaTablero({
-                                    indiceFila,
-                                    indiceColumna,
-                                    barcoClickeado: verificarOcupacion(indiceFila, indiceColumna).nombreBarco || ""
-                                })
+                            onClick={ () =>
+                                onClickCeldaTablero({ indiceFila, indiceColumna, barcoClickeado: verificarOcupacion(indiceFila, indiceColumna).nombreBarco || ""})
                             }
                             propietarioTablero={propietarioTablero}
                             verificarOcupacion={verificarOcupacion(indiceFila, indiceColumna)}
                             key={`celda_${indiceFila}_${indiceColumna}`}
                         />
+                        
                     )
                 })
             })}

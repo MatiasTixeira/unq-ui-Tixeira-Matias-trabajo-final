@@ -1,5 +1,5 @@
 import CuadradoDelEje from "./CuadradoDelEje"
-import 'EjesDelTablero.css'
+import './EjesDelTablero.css'
 
 const EjesDelTablero = ({ direccion = "row" }) => {
 

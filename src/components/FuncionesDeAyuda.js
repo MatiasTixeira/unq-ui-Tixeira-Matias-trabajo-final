@@ -1,4 +1,4 @@
-import { TableroDelJueguito, tiroEsquivado } from "../utils/DB";
+import { TableroDelJueguito, tiroEsquivado } from "./Informacion"
 
 export const tieneSuficientesBloquesParaDesplegar = ( esHorizontal, longitudBarco, indiceFila, indiceColumna ) => {
   return esHorizontal
@@ -27,20 +27,20 @@ export const obtenerBloquesOcupables = ( esHorizontal, indiceFila, indiceColumna
 }
 
 export const estaOcupadoPorOtroBarco = (barcosDesplegados, bloquesOcupados) => {
-  let estáOcupado = false
+  let estaOcupado = false
   let nombreBarco = ""
   if (barcosDesplegados && barcosDesplegados.length > 0) {
     barcosDesplegados.forEach((barco) => {
       barco.bloquesOcupados.forEach((bloque) => {
         if (bloquesOcupados.includes(bloque)) {
           nombreBarco = barco?.nombreBarco
-          estáOcupado = true
+          estaOcupado = true
           return
         }
       })
     })
   }
-  return { estáOcupado, nombreBarco };
+  return { estaOcupado, nombreBarco }
 }
 
 export const generarIndiceFilaYColumnaAleatorio = () => {
